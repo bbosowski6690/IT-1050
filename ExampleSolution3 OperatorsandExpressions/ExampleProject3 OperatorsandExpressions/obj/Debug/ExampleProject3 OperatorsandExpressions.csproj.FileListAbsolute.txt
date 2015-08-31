@@ -1,1 +1,6 @@
 C:\Users\Brittany\Desktop\ExampleSolution3 OperatorsandExpressions\ExampleProject3 OperatorsandExpressions\bin\Debug\ExampleProject3 OperatorsandExpressions.exe.config
+C:\Users\Brittany\Desktop\ExampleSolution3 OperatorsandExpressions\ExampleProject3 OperatorsandExpressions\obj\Debug\ExampleProject3 OperatorsandExpressions.csprojResolveAssemblyReference.cache
+C:\Users\Brittany\Desktop\ExampleSolution3 OperatorsandExpressions\ExampleProject3 OperatorsandExpressions\bin\Debug\ExampleProject3 OperatorsandExpressions.exe
+C:\Users\Brittany\Desktop\ExampleSolution3 OperatorsandExpressions\ExampleProject3 OperatorsandExpressions\bin\Debug\ExampleProject3 OperatorsandExpressions.pdb
+C:\Users\Brittany\Desktop\ExampleSolution3 OperatorsandExpressions\ExampleProject3 OperatorsandExpressions\obj\Debug\ExampleProject3 OperatorsandExpressions.exe
+C:\Users\Brittany\Desktop\ExampleSolution3 OperatorsandExpressions\ExampleProject3 OperatorsandExpressions\obj\Debug\ExampleProject3 OperatorsandExpressions.pdb
