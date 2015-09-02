@@ -1,0 +1,6 @@
+c:\users\s01064155\documents\visual studio 2013\Projects\FuelEfficencySolution1\FuelEfficencyProject1\bin\Debug\FuelEfficencyProject1.exe.config
+c:\users\s01064155\documents\visual studio 2013\Projects\FuelEfficencySolution1\FuelEfficencyProject1\bin\Debug\FuelEfficencyProject1.exe
+c:\users\s01064155\documents\visual studio 2013\Projects\FuelEfficencySolution1\FuelEfficencyProject1\bin\Debug\FuelEfficencyProject1.pdb
+c:\users\s01064155\documents\visual studio 2013\Projects\FuelEfficencySolution1\FuelEfficencyProject1\obj\Debug\FuelEfficencyProject1.csprojResolveAssemblyReference.cache
+c:\users\s01064155\documents\visual studio 2013\Projects\FuelEfficencySolution1\FuelEfficencyProject1\obj\Debug\FuelEfficencyProject1.exe
+c:\users\s01064155\documents\visual studio 2013\Projects\FuelEfficencySolution1\FuelEfficencyProject1\obj\Debug\FuelEfficencyProject1.pdb
