@@ -1,0 +1,6 @@
+C:\Users\Brittany\Desktop\IT-1050 Solution Assignment1\IT-1050 Assignment1\bin\Debug\IT-1050 Assignment1.exe.config
+C:\Users\Brittany\Desktop\IT-1050 Solution Assignment1\IT-1050 Assignment1\bin\Debug\IT-1050 Assignment1.exe
+C:\Users\Brittany\Desktop\IT-1050 Solution Assignment1\IT-1050 Assignment1\bin\Debug\IT-1050 Assignment1.pdb
+C:\Users\Brittany\Desktop\IT-1050 Solution Assignment1\IT-1050 Assignment1\obj\Debug\IT-1050 Assignment1.csprojResolveAssemblyReference.cache
+C:\Users\Brittany\Desktop\IT-1050 Solution Assignment1\IT-1050 Assignment1\obj\Debug\IT-1050 Assignment1.exe
+C:\Users\Brittany\Desktop\IT-1050 Solution Assignment1\IT-1050 Assignment1\obj\Debug\IT-1050 Assignment1.pdb
