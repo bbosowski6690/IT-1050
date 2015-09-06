@@ -35,9 +35,8 @@
             bool isCitizen = bool.Parse(System.Console.ReadLine());
 
             bool canVote;
-            canVote = isCitizen;
-            canVote = age >= 18;
-            System.Console.WriteLine("Voter Eligibility:" + " " + canVote);
+            canVote = isCitizen && age >= 18;
+            System.Console.WriteLine("Voter Eligibility:" + " " + canVote); 
 
             
 
