@@ -1,7 +1,0 @@
-C:\Users\Brittany\Desktop\Example2Solution ObjectMethods\Example2Project ObjectMethods\bin\Debug\Example2Project ObjectMethods.exe.config
-C:\Users\Brittany\Desktop\Example2Solution2 ObjectMethods\Example2Project ObjectMethods\bin\Debug\Example2Project ObjectMethods.exe.config
-C:\Users\Brittany\Desktop\Example2Solution2 ObjectMethods\Example2Project ObjectMethods\bin\Debug\Example2Project ObjectMethods.exe
-C:\Users\Brittany\Desktop\Example2Solution2 ObjectMethods\Example2Project ObjectMethods\bin\Debug\Example2Project ObjectMethods.pdb
-C:\Users\Brittany\Desktop\Example2Solution2 ObjectMethods\Example2Project ObjectMethods\obj\Debug\Example2Project ObjectMethods.csprojResolveAssemblyReference.cache
-C:\Users\Brittany\Desktop\Example2Solution2 ObjectMethods\Example2Project ObjectMethods\obj\Debug\Example2Project ObjectMethods.exe
-C:\Users\Brittany\Desktop\Example2Solution2 ObjectMethods\Example2Project ObjectMethods\obj\Debug\Example2Project ObjectMethods.pdb

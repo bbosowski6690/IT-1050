@@ -1,6 +1,0 @@
-C:\Users\Brittany\Desktop\Example2Solution ClassesAndObjects\Example2Project ClassesAndObjects\bin\Debug\Example2Project ClassesAndObjects.exe.config
-C:\Users\Brittany\Desktop\Example2Solution ClassesAndObjects\Example2Project ClassesAndObjects\bin\Debug\Example2Project ClassesAndObjects.exe
-C:\Users\Brittany\Desktop\Example2Solution ClassesAndObjects\Example2Project ClassesAndObjects\bin\Debug\Example2Project ClassesAndObjects.pdb
-C:\Users\Brittany\Desktop\Example2Solution ClassesAndObjects\Example2Project ClassesAndObjects\obj\Debug\Example2Project ClassesAndObjects.csprojResolveAssemblyReference.cache
-C:\Users\Brittany\Desktop\Example2Solution ClassesAndObjects\Example2Project ClassesAndObjects\obj\Debug\Example2Project ClassesAndObjects.exe
-C:\Users\Brittany\Desktop\Example2Solution ClassesAndObjects\Example2Project ClassesAndObjects\obj\Debug\Example2Project ClassesAndObjects.pdb
