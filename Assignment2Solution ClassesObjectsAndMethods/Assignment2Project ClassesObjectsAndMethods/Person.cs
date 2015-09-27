@@ -15,8 +15,14 @@ namespace Assignment2Project_ClassesObjectsAndMethods
         public Person Spouse;
 
 
+        public bool IsMarried()
+        {
+            return Spouse != null;
+        }
+
         public static int Count;
 
+        public static int SumOfAllAges;
 
         public static double AverageAge;
 
@@ -26,15 +32,11 @@ namespace Assignment2Project_ClassesObjectsAndMethods
             return this.FirstName + " " + this.LastName;
         }
 
-        public int GetAge()
-        {
-            return this.Age;
-        }
-    
+        
         public void PrintNameAndAge()
         {
-            Console.WriteLine("Name and Age: " + this.GetFullName());
-            Console.WriteLine("Age: " + GetAge());
+            Console.WriteLine("Name and Age: " + this.GetFullName () + this.Age);
+       
         }
 
         

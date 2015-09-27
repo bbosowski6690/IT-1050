@@ -5,40 +5,131 @@
         static void Main(string[] args)
         {
             Person.AverageAge = 0;
+            Person.SumOfAllAges = 0;
             Person.Count = 0;
 
-          
+
+
             Person person1 = new Person();
             System.Console.WriteLine("What is your first name?");
-            System.Console.WriteLine("First Name: ");
             person1.FirstName = System.Console.ReadLine();
             System.Console.WriteLine("What is your last name?");
-            System.Console.WriteLine("Last Name: ");
             person1.LastName = System.Console.ReadLine();
             System.Console.WriteLine("How old are you?");
-            System.Console.WriteLine("Age: ");
             person1.Age = int.Parse(System.Console.ReadLine());
-            Person.AverageAge += person1.Age;
-            System.Console.WriteLine("Are you married?");
-            if (System.Console.ReadLine().ToLower() == "Y")
-            System.Console.WriteLine("What is your spouse's name?");
-            Person Spouse = new Person();
-            System.Console.WriteLine("Your Spouse's First Name: ");
-            person1.Spouse.FirstName = System.Console.ReadLine();
-            System.Console.WriteLine("How old is your spouse?");
-            person1.Spouse.Age = int.Parse(System.Console.ReadLine());
-                Person.AverageAge += person1.Spouse.Age;
+            Person.Count++;
+            Person.SumOfAllAges += person1.Age;
 
+            System.Console.WriteLine("       ");
+            System.Console.WriteLine("       ");
+
+            System.Console.WriteLine("Are you married?  (y/n)");
+            if (System.Console.ReadLine().ToLower().StartsWith("y"))
+             {
+                System.Console.WriteLine("What is your spouse's name?");
+                person1.Spouse = new Person();
+                person1.Spouse.FirstName = System.Console.ReadLine();
+                System.Console.WriteLine("How old is your spouse?");
+                person1.Spouse.Age = int.Parse(System.Console.ReadLine());
+                Person.Count++;
+                Person.SumOfAllAges += person1.Spouse.Age;
+            }
+
+            System.Console.WriteLine("       ");
+            System.Console.WriteLine("       ");
+
+            Person person2 = new Person();
+            System.Console.WriteLine("What is your first name?");
+            person2.FirstName = System.Console.ReadLine();
+            System.Console.WriteLine("What is your last name?");
+            person2.LastName = System.Console.ReadLine();
+            System.Console.WriteLine("How old are you?");
+            person2.Age = int.Parse(System.Console.ReadLine());
+            Person.Count++;
+            Person.SumOfAllAges += person2.Age;
+
+            System.Console.WriteLine("       ");
+            System.Console.WriteLine("       ");
+
+            System.Console.WriteLine("Are you married? (y/n)");
+            if (System.Console.ReadLine().ToLower().StartsWith("y"))
+            {
+                System.Console.WriteLine("What is your spouse's name?");
+                person2.Spouse = new Person();
+                person2.Spouse.FirstName = System.Console.ReadLine();
+                System.Console.WriteLine("How old is your spouse?");
+                person2.Spouse.Age = int.Parse(System.Console.ReadLine());
+                Person.Count++;
+                Person.SumOfAllAges += person2.Spouse.Age;
+            }
+
+            System.Console.WriteLine("       ");
+            System.Console.WriteLine("       ");
+
+            Person person3 = new Person();
+            System.Console.WriteLine("What is your first name?");
+            person3.FirstName = System.Console.ReadLine();
+            System.Console.WriteLine("What is your last name?");
+            person3.LastName = System.Console.ReadLine();
+            System.Console.WriteLine("How old are you?");
+            person3.Age = int.Parse(System.Console.ReadLine());
+            Person.Count++;
+            Person.SumOfAllAges += person3.Age;
+
+            System.Console.WriteLine("       ");
+            System.Console.WriteLine("       ");
+
+            System.Console.WriteLine("Are you married? (y/n)");
+            if (System.Console.ReadLine().ToLower().StartsWith("y"))
+            {
+                System.Console.WriteLine("What is your spouse's name?");
+                person3.Spouse = new Person();
+                person3.Spouse.FirstName = System.Console.ReadLine();
+                System.Console.WriteLine("How old is your spouse?");
+                person3.Spouse.Age = int.Parse(System.Console.ReadLine());
+                Person.Count++;
+                Person.SumOfAllAges += person3.Spouse.Age;
+
+            }
+
+            System.Console.WriteLine("       ");
+            System.Console.WriteLine("       ");
 
             System.Console.WriteLine();
             person1.PrintNameAndAge();
-            person1.Spouse.PrintNameAndAge();
-            
+            if (person1.IsMarried())
+            {
+                person1.Spouse.PrintNameAndAge();
 
+            }
 
+            System.Console.WriteLine("       ");
+            System.Console.WriteLine("       ");
 
+            System.Console.WriteLine();
+            person2.PrintNameAndAge();
+            if (person2.IsMarried())
 
-            Person.AverageAge /= Person.Count;
+            {
+                person2.Spouse.PrintNameAndAge();
+
+            }
+
+            System.Console.WriteLine("       ");
+            System.Console.WriteLine("       ");
+
+            System.Console.WriteLine();
+            person3.PrintNameAndAge();
+            if (person3.IsMarried())
+
+            {
+                person3.Spouse.PrintNameAndAge();
+            }
+
+            System.Console.WriteLine("       ");
+            System.Console.WriteLine("       ");
+
+            Person.AverageAge = Person.SumOfAllAges /= Person.Count;
             System.Console.WriteLine("Average age is {0}", Person.AverageAge);
             System.Console.WriteLine("Press any key to continue");
             System.Console.ReadKey();
