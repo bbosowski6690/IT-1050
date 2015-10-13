@@ -2,25 +2,33 @@
 {
     class Instructor
     {
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public string CourseName { get; private set; }
+        private static string LastName;
+
+        public static string FirstName { get; private set; }
+        public static string CourseName { get; private set; }
 
         public Instructor(string FirstName, string LastName, string CourseName)
         {
-         
+            FirstName = Instructor.FirstName;
+            LastName = Instructor.LastName;
+            CourseName = Instructor.CourseName;
         }
 
-        public void SetStudentGrade(Student Grade, string v1, int v2)
+        private class Teacher : Instructor
         {
-            
+            public Teacher(string FirstName, string LastName, string CourseName) : base(FirstName, LastName, CourseName)
+            {
+            }
         }
 
-
+        public void SetStudentGrade(string v1, int v2)
+        {
+           
+        }
 
         public string GetFullName()
         {
-            return this.FirstName + this.LastName;
+            return FirstName + LastName;
         }
 
         public string GetCourseName()

@@ -2,14 +2,13 @@
 {
     class Program
     {
-        public static int x { get; private set; }
-
+        
         static void Main(string[] args)
         {
 
-            Instructor John = new Instructor("John", "Smith", "English");
+           Instructor John = new Instructor("John", "Smith", "English");
 
-            Instructor Mike = new Instructor("Mike", "Thornton", "Math");
+           Instructor Mike = new Instructor("Mike", "Thornton", "Math");
 
 
             John.SetStudentGrade("Jane", 95);
@@ -17,29 +16,18 @@
             Mike.SetStudentGrade("Melissa", 90);
             Mike.SetStudentGrade("Matt", 92);
 
-            Student Jane = new Student();
-            Jane.Name = "Jane";
-            Jane.Grade = 0;
-            Jane.Instructor = John;
-            Jane.PrintNameGradeInstructor();
 
-            Student Joe = new Student();
-            Joe.Name = "Joe";
-            Joe.Grade = 0;
-            Joe.Instructor = John;
-            Joe.PrintNameGradeInstructor();
+            Student Jane = new Student("Jane", 0, John);
+            Jane.Print();
 
-            Student Melissa = new Student();
-            Melissa.Name = "Melissa";
-            Melissa.Grade = 0;
-            Melissa.Instructor = Mike;
-            Melissa.PrintNameGradeInstructor();
+            Student Joe = new Student("Joe", 0, John);
+            Joe.Print();
 
-            Student Matt = new Student();
-            Matt.Name = "Matt";
-            Matt.Grade = 0;
-            Matt.Instructor = Mike;
-            Matt.PrintNameGradeInstructor();
+            Student Melissa = new Student("Melissa", 0, Mike);
+            Melissa.Print();
+
+            Student Matt = new Student("Matt", 0, Mike);
+            Matt.Print();
 
             System.Console.ReadKey();
 
@@ -59,5 +47,7 @@
 //Have Mike give Matt a grade of 92.
 //Have every student Print their information.
         }
+
+      
     }
 }
