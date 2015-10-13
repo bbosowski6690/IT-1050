@@ -24,23 +24,23 @@
 
             Student Matt = new Student("Matt", 0, Mike);
 
-            John.SetStudentGrade = Jane, ++ 95;
+            John.SetStudentGrade(Jane, 95);
             
-            John.SetStudentGrade = John, ++ 85;
+            John.SetStudentGrade(Joe, 85);
             
-            Mike.SetStudentGrade = Melissa, ++ 90;
+            Mike.SetStudentGrade(Melissa, 90);
             
-            Mike.SetStudentGrade = Matt, ++ 92;
+            Mike.SetStudentGrade(Matt, 92);
 
             System.Console.WriteLine(" ");
 
-            Jane.PrintInformation();
+            Jane.Print();
             
-            Joe.PrintInformation();
+            Joe.Print();
             
-            Melissa.PrintInformation();
+            Melissa.Print();
             
-            Matt.PrintInformation();
+            Matt.Print();
 
             System.Console.WriteLine(" ");
 
