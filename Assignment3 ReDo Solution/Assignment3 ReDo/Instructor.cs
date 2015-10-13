@@ -18,14 +18,15 @@
 
         public void SetStudentGrade(Student Name, Student Grade)
         {
-           System.Console.WriteLine();
+            Student.Name;
+            Grade += null;
         }
 
         public void PrintTeacherInformation()
         {
             System.Console.WriteLine("Teacher: " + this.Name + " " + "Course: " + this.CourseName);
- 
+        } 
 
     }
 
-}
+    }
