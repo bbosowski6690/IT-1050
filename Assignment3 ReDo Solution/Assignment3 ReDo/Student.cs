@@ -3,14 +3,32 @@
     class Student
     {
         public string FirstName;
-        public string LastName;
-        public int Age;
+        public int Grade;
+        public Instructor Teacher;
+
     
-        public string GetFullName()
+        public string PrintInformation()
         {
-            return this.FirstName + " " + this.LastName;
+            return FirstName + " " + Grade + " " + Teacher + " " + Teacher.CourseName;    
         }
 
+        public Student(string firstname, int grade, Instructor teacher)
+        {
+            this.FirstName = firstname;
+            this.Grade = grade;
+            this.Teacher = teacher;
+        }
+
+        public int SetGrade()
+        {
+           return Grade = 0;
+        }
+
+        public void Print()
+        {
+            System.Console.WriteLine("Student:" + this.PrintInformation());
+            System.Console.WriteLine("   ");
+            System.Console.ReadKey();
 
 
 
