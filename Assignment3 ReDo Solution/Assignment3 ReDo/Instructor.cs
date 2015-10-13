@@ -16,9 +16,9 @@
             return Name + CourseName;
         }
 
-        public void SetStudentGrade(Student Name, int Grade)
+        public void SetStudentGrade(Student Student, int Grade)
         {
-            Name.SetGrade(Grade);
+            Student.SetGrade(Grade);
         }
 
         public void PrintTeacherInformation()
