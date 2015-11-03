@@ -4,15 +4,17 @@
     {
         static void Main(string[] args)
         {
+            MessageFromComputer("Hello! Welcome to the CinemaPlex!");
+            System.Console.WriteLine("");
             MessageFromComputer("Would you like to see a matinee or evening movie?");
 
             string command = System.Console.ReadLine();
-            
+
 
             if (command.ToLower().Contains("matinee"))
             {
-                double inputInteger = double.Parse(System.Console.ReadLine());
                 MessageFromComputer("How many adults?");
+                double inputInteger = double.Parse(System.Console.ReadLine());
                 if (inputInteger > 0)
                 {
                     double AdultMatineeTicket = 5.99;
@@ -64,8 +66,8 @@
                     }
 
                     MessageFromComputer("How many children?");
-                   inputInteger = double.Parse(System.Console.ReadLine());
-                   if (inputInteger > 0)
+                    inputInteger = double.Parse(System.Console.ReadLine());
+                    if (inputInteger > 0)
                     {
                         double ChildEveningTicket = 6.99;
                         double TotalChildMatinee = (ChildEveningTicket * inputInteger);
@@ -100,68 +102,85 @@
             command = System.Console.ReadLine();
             if (command.ToLower().Contains("y"))
             {
-                MessageFromComputer("Would you like any sodas?");
+                MessageFromComputer("Would you like anything to drink?");
+                command = System.Console.ReadLine();
                 if (command.ToLower().Contains("y"))
                 {
-                    MessageFromComputer("How many small sodas?");
-                    double inputInteger = double.Parse(System.Console.ReadLine());
-                    if (inputInteger > 0)
+                    MessageFromComputer("Would you like small or large?");
+                    command = System.Console.ReadLine();
+                    if (command.ToLower().Contains("small"))
                     {
-                        double SmallSoda = 3.50;
-                        double TotalSmallSoda = (SmallSoda * inputInteger);
+                        MessageFromComputer("How many?");
+                        double inputInteger = double.Parse(System.Console.ReadLine());
+                        if (inputInteger > 0)
+                        {
+                            double SmallSoda = 3.50;
+                            double TotalSmallSoda = (SmallSoda * inputInteger);
+                        }
+
+                        else if (command.ToLower().Contains("large"))
+                        {
+                            MessageFromComputer("How many?");
+                            inputInteger = double.Parse(System.Console.ReadLine());
+                            if (inputInteger > 0)
+                            {
+                                double LargeSoda = 5.99;
+                                double TotalLargeSoda = (LargeSoda * inputInteger);
+                            }
+                        }
+
+                        MessageFromComputer("Would you like any hot dogs?");
+                        command = System.Console.ReadLine();
+                        if (command.ToLower().Contains("y"))
+                        {
+                            MessageFromComputer("How many hot dogs would you like?");
+                            inputInteger = double.Parse(System.Console.ReadLine());
+                            if (inputInteger > 0)
+                            {
+                                double HotDog = 3.99;
+                                double TotalHotDogs = (HotDog * inputInteger);
+                            }
+                        }
+
+                        MessageFromComputer("Would you like any popcorn?");
+                        command = System.Console.ReadLine();
+                        if (command.ToLower().Contains("y"))
+                        {
+                            MessageFromComputer("How many bags of popcorn would you like?");
+                            inputInteger = double.Parse(System.Console.ReadLine());
+                            if (inputInteger > 0)
+                            {
+                                double BagOfPopcorn = 4.50;
+                                double TotalPopcorn = (BagOfPopcorn * inputInteger);
+                            }
+                        }
+
+                        MessageFromComputer("Would you like any candy?");
+                        command = System.Console.ReadLine();
+                        if (command.ToLower().Contains("y"))
+                        {
+                            MessageFromComputer("How many boxes of candy?");
+                            inputInteger = double.Parse(System.Console.ReadLine());
+                            if (inputInteger > 0)
+                            {
+                                double BoxOfCandy = 1.99;
+                                double TotalCandy = (BoxOfCandy * inputInteger);
+                            }
+                        }
+
                     }
-
-                    MessageFromComputer("How many large sodas?");
-                    if (inputInteger > 0)
-                    {
-                        double LargeSoda = 5.99;
-                        double TotalLargeSoda = (LargeSoda * inputInteger);
-                    }
+                   
                 }
-
-                MessageFromComputer("Would you like any hot dogs?");
-                if (command.ToLower().Contains("y"))
-                {
-                    MessageFromComputer("How many?");
-                    double inputInteger = double.Parse(System.Console.ReadLine());
-                    if (inputInteger > 0)
-                    {
-                        double HotDog = 3.99;
-                        double TotalHotDogs = (HotDog * inputInteger);
-                    }
-                }
-
-                MessageFromComputer("Would you like any popcorn?");
-                if (command.ToLower().Contains("y"))
-                {
-                    MessageFromComputer("How many bags?");
-                    double inputInteger = double.Parse(System.Console.ReadLine());
-                    if (inputInteger > 0)
-                    {
-                        double BagOfPopcorn = 4.50;
-                        double TotalPopcorn = (BagOfPopcorn * inputInteger);
-                    }
-                }
-
-                MessageFromComputer("Would you like any candy?");
-                if (command.ToLower().Contains("y"))
-                {
-                    MessageFromComputer("How many?"); 
-                    double inputInteger = double.Parse(System.Console.ReadLine());
-                    if (inputInteger > 0)
-                    {
-                        double BoxOfCandy = 1.99;
-                        double TotalCandy = (BoxOfCandy * inputInteger);
-                    }
-                }
-
-                else
-                {
-                    MessageFromComputer("Maybe next time, enjoy your movie.");
-                }
-
+                
             }
+            else if (command.ToLower().Contains("n"))
+            {
+                MessageFromComputer("Maybe next time, enjoy your movie.");
+            }
+            Finish();
         }
+
+ 
 
             //Matinee Prices
             //Child  $3.99
