@@ -7,10 +7,11 @@
             MessageFromComputer("Would you like to see a matinee or evening movie?");
 
             string command = System.Console.ReadLine();
-            double inputInteger = double.Parse(System.Console.ReadLine());
+            
 
             if (command.ToLower().Contains("matinee"))
             {
+                double inputInteger = double.Parse(System.Console.ReadLine());
                 MessageFromComputer("How many adults?");
                 if (inputInteger > 0)
                 {
@@ -51,6 +52,7 @@
             {
                 {
                     MessageFromComputer("How many adults?");
+                    double inputInteger = double.Parse(System.Console.ReadLine());
                     if (inputInteger > 0)
                     {
                         double AdultEveningTicket = 10.99;
@@ -62,8 +64,8 @@
                     }
 
                     MessageFromComputer("How many children?");
-                    inputInteger = double.Parse(System.Console.ReadLine());
-                    if (inputInteger > 0)
+                   inputInteger = double.Parse(System.Console.ReadLine());
+                   if (inputInteger > 0)
                     {
                         double ChildEveningTicket = 6.99;
                         double TotalChildMatinee = (ChildEveningTicket * inputInteger);
@@ -95,33 +97,62 @@
             }
 
             MessageFromComputer("Would you like any thing from the Concession Stand?");
-
+            command = System.Console.ReadLine();
             if (command.ToLower().Contains("y"))
             {
                 MessageFromComputer("Would you like any sodas?");
                 if (command.ToLower().Contains("y"))
                 {
                     MessageFromComputer("How many small sodas?");
+                    double inputInteger = double.Parse(System.Console.ReadLine());
+                    if (inputInteger > 0)
+                    {
+                        double SmallSoda = 3.50;
+                        double TotalSmallSoda = (SmallSoda * inputInteger);
+                    }
 
                     MessageFromComputer("How many large sodas?");
+                    if (inputInteger > 0)
+                    {
+                        double LargeSoda = 5.99;
+                        double TotalLargeSoda = (LargeSoda * inputInteger);
+                    }
                 }
 
                 MessageFromComputer("Would you like any hot dogs?");
                 if (command.ToLower().Contains("y"))
                 {
                     MessageFromComputer("How many?");
+                    double inputInteger = double.Parse(System.Console.ReadLine());
+                    if (inputInteger > 0)
+                    {
+                        double HotDog = 3.99;
+                        double TotalHotDogs = (HotDog * inputInteger);
+                    }
                 }
 
                 MessageFromComputer("Would you like any popcorn?");
                 if (command.ToLower().Contains("y"))
                 {
                     MessageFromComputer("How many bags?");
+                    double inputInteger = double.Parse(System.Console.ReadLine());
+                    if (inputInteger > 0)
+                    {
+                        double BagOfPopcorn = 4.50;
+                        double TotalPopcorn = (BagOfPopcorn * inputInteger);
+                    }
                 }
 
                 MessageFromComputer("Would you like any candy?");
                 if (command.ToLower().Contains("y"))
                 {
-                    MessageFromComputer("How many?");
+                    MessageFromComputer("How many?"); 
+                    double inputInteger = double.Parse(System.Console.ReadLine());
+                    if (inputInteger > 0)
+                    {
+                        double BoxOfCandy = 1.99;
+                        double TotalCandy = (BoxOfCandy * inputInteger);
+                    }
                 }
 
                 else
@@ -168,7 +199,7 @@
 
         private static void YourFinalTotal(string text)
         {
-            System.Console.WriteLine("Your final total is " + FinalTotal + ".");
+            System.Console.WriteLine("Your final total is " + ".");
             System.Console.WriteLine(" ");
             System.Console.WriteLine("Thank you for your purchase and enjoy your movie!");
             System.Console.WriteLine(" ");
