@@ -2,17 +2,36 @@
 {
     class Student
     {
-        public string FirstName;
-        public string LastName;
-        public int Age;
+        private string FirstName;
+        private int Grade;
+        private Instructor Teacher;
+
     
-        public string GetFullName()
+        public string PrintInformation()
         {
-            return this.FirstName + " " + this.LastName;
+            return FirstName + " " + Grade;   
         }
 
+        public Student(string firstname, int grade, Instructor teacher)
+        {
+            this.FirstName = firstname;
+            this.Grade = grade;
+            this.Teacher = teacher;
+        }
 
+        public void SetGrade(int Grade)
+        {
+            this.Grade = Grade;
+        }
 
+        public void Print()
+        {
+            System.Console.WriteLine("Student:" + PrintInformation());
+            this.Teacher.PrintTeacherInformation();
+            System.Console.WriteLine("   ");
+            System.Console.ReadKey();
+
+        }
 
     }
 }

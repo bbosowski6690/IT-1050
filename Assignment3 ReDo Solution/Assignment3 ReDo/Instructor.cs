@@ -2,20 +2,30 @@
 {
     class Instructor
     {
+        private string Name;
+        private string CourseName;
 
-        public class Instructor()
-            {
-            private string FirstName;
-        public string GetName;
+        public Instructor(string teacherName, string courseName)
         {
-        return this.Name;
-         }
-    public void SetName(string new Name)
+            Name = teacherName;
+            CourseName = courseName;
+        }
+
+        public string GetTeacherNameAndCourse()
         {
-        this.Name = new Name;
-           }
-     
+            return Name + CourseName;
+        }
+
+        public void SetStudentGrade(Student Student, int Grade)
+        {
+            Student.SetGrade(Grade);
+        }
+
+        public void PrintTeacherInformation()
+        {
+            System.Console.WriteLine("Teacher: " + this.Name + " " + "Course: " + this.CourseName);
+        } 
 
     }
 
-}
+    }
