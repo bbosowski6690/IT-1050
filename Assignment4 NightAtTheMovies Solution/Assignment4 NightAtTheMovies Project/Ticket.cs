@@ -9,8 +9,8 @@ namespace Assignment4_NightAtTheMovies_Project
     public class Ticket
     {
         public enum TicketType {Adult, Child, Senior}
-
-        bool isMatinee = false;
+        public static int TicketCount;
+        public bool isMatinee = false;
 
         private const double priceAdultMatinee = 5.99;
         private const double priceChildMatinee = 3.99;
@@ -20,7 +20,7 @@ namespace Assignment4_NightAtTheMovies_Project
         private const double priceSeniorEvening = 8.50;
 
         private static int quantityAdultMatinee = 0;
-        private static int quantityChildMatinee = 0;
+        public static int quantityChildMatinee = 0;
         private static int quantitySeniorMatinee = 0;
         private static int quantityAdultEvening = 0;
         private static int quantityChildEvening = 0;
@@ -39,8 +39,21 @@ namespace Assignment4_NightAtTheMovies_Project
         }
 
         public static void GetTicketQuantities()
-        {
- 
+        { 
+            TicketCount = 0;
+            bool isMatinee = false;
+            if (isMatinee)
+                {
+                quantityChildMatinee += TicketCount;
+                quantityAdultMatinee += TicketCount;
+                quantitySeniorMatinee += TicketCount;
+            }
+            else
+            {
+                quantityChildEvening += TicketCount;
+                quantityAdultEvening += TicketCount;
+                quantitySeniorEvening += TicketCount;
+            }
         }
         public static double GetTotalTicketCost()
         {
@@ -49,7 +62,11 @@ namespace Assignment4_NightAtTheMovies_Project
             bool isMatinee = false;
             if (isMatinee)
             {
-                TotalTicketCost += quantityAdultMatinee * priceAdultMatinee;
+                TotalTicketCost += (quantityAdultMatinee * priceAdultMatinee) + (quantityChildMatinee * priceChildMatinee) + (quantitySeniorMatinee * priceSeniorMatinee);
+            }
+            else
+            {
+                TotalTicketCost += (quantityAdultEvening * priceAdultEvening) + (quantityChildEvening * priceChildEvening) + (quantitySeniorEvening * priceSeniorEvening);
             }
 
             return TotalTicketCost;
