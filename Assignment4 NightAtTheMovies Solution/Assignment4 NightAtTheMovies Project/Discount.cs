@@ -8,31 +8,44 @@ namespace Assignment4_NightAtTheMovies_Project
 {
     class Discount
     {
+       
         public static double DiscountAmount;
-
+       
+        public double DiscountB = 0;
+        public double DiscountC = 0;
+        
         public static double GetTotalDiscountAmount()
         {
+            double DiscountA = 0;
+            double DiscountB = 0;
+            double DiscountC = 0;
             double DiscountAmount = 0;
             bool isDiscount = false;
             if (isDiscount)
             {
+                if (Ticket.TicketCount >= 3)
+                {
+                    DiscountA = (Ticket - 4.50);
+                }
+                
                 if (ConcessionStand.LargeSoda < ConcessionStand.Popcorn)
                 {
-                    Discount1 = ConcessionStand.LargeSoda * 2;
+                    DiscountB = ConcessionStand.LargeSoda * 2;
                 }
                 else if (ConcessionStand.Popcorn < ConcessionStand.LargeSoda)
                 {
-                    Discount1 = ConcessionStand.Popcorn * 2;
+                    DiscountB = ConcessionStand.Popcorn * 2;
                 }
                 else
                 {
-                    Discount1 = ConcessionStand.Popcorn * 2;
+                    DiscountB = ConcessionStand.Popcorn * 2;
                 }
 
                 if (ConcessionStand.Candy >= 4)
                 {
-                    Discount3 = (Candy / 4) * 1.99;
+                    DiscountC = (ConcessionStand.Candy / 4) * 1.99;
                 }
+
             }
 
             return DiscountAmount;
