@@ -10,11 +10,11 @@ namespace Assignment4_NightAtTheMovies_Project
     {
         public static double ConcessionCost;
 
-        const double priceSmallSoda = 3.50;
-        const double priceLargeSoda = 5.99;
-        const double priceHotDog = 3.99;
-        const double pricePopcorn = 4.50;
-        const double priceCandy = 1.99;
+        public const double priceSmallSoda = 3.50;
+        public const double priceLargeSoda = 5.99;
+        public const double priceHotDog = 3.99;
+        public const double pricePopcorn = 4.50;
+        public const double priceCandy = 1.99;
 
         static int SmallSoda;
         static int LargeSoda;

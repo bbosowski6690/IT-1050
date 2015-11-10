@@ -5,9 +5,14 @@
         static void Main(string[] args)
         {
             Ticket.TicketCount = 0;
-            ConcessionStand.ConcessionCost = 0; 
+            ConcessionStand.ConcessionCost = 0;
 
-            System.Console.WriteLine("Would you like to see a matinee or evening movie?");
+            double TotalTicketCost = Ticket.GetTotalTicketCost();
+            double TotalConessionCost = ConcessionStand.GetTotalConcessionCost();
+            double TotalDiscountAmount = Discount.GetTotalDiscountAmount();
+            double FinalTotalCost = TotalTicketCost + TotalConessionCost - TotalDiscountAmount;
+            
+            MessageFromComputer("Would you like to see a matinee or evening movie?");
             if (System.Console.ReadLine().ToLower().StartsWith("matinee"))
             {
                 MessageFromComputer("How many adult tickets?");
@@ -47,33 +52,33 @@
             MessageFromComputer("Would you like anything from the concession stand?");
             System.Console.ReadLine();
 
-                if (System.Console.ReadLine().ToLower().StartsWith("y"))
+            if (System.Console.ReadLine().ToLower().StartsWith("y"))
             {
-                MessageFromComputer("One small soda is $" + priceSmallSoda + " ");
+                MessageFromComputer("One small soda is $" + ConcessionStand.priceSmallSoda + " ");
                 MessageFromComputer("How many would you like?");
                 double inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand SmallSoda = new ConcessionStand();
                 ConcessionStand.ConcessionCost += (SmallSoda * priceSmallSoda);
-                
-                MessageFromComputer("One large soda is $" + priceLargeSoda + " ");
+
+                MessageFromComputer("One large soda is $" + ConcessionStand.priceLargeSoda + " ");
                 MessageFromComputer("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand LargeSoda = new ConcessionStand();
                 ConcessionStand.ConcessionCost += (LargeSoda * priceLargeSoda);
 
-                MessageFromComputer("One hot dog is $" + priceHotDog + " ");
+                MessageFromComputer("One hot dog is $" + ConcessionStand.priceHotDog + " ");
                 MessageFromComputer("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand HotDog = new ConcessionStand();
                 ConcessionStand.ConcessionCost += (HotDog * priceHotdog);
 
-                MessageFromComputer("One bag of popcorn is $" + pricePopcorn + " ");
+                MessageFromComputer("One bag of popcorn is $" + ConcessionStand.pricePopcorn + " ");
                 MessageFromComputer("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand Popcorn = new ConcessionStand();
                 ConcessionStand.ConcessionCost += (Popcorn * pricePopcorn);
 
-                MessageFromComputer("One box of candy is $" + priceCandy + " ");
+                MessageFromComputer("One box of candy is $" + ConcessionStand.priceCandy + " ");
                 MessageFromComputer("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand Candy = new ConcessionStand();
@@ -87,15 +92,9 @@
 
 
 
-            double TotalTicketCost = Ticket.GetTotalTicketCost();
+            
 
-            double TotalConessionCost = ConcessionStand.GetTotalConcessionCost();
-
-            double TotalDiscountAmount = Discount.GetTotalDiscountAmount();
-
-            double FinalTotalCost = TotalTicketCost + TotalConessionCost - TotalDiscountAmount;
-
-        }
+       
         private static void MessageFromComputer(string text)
         {
             System.Console.WriteLine();
@@ -114,8 +113,10 @@
             System.Console.ReadKey();
         }
 
-
+        
     }
+    
+}
 }
     
 
