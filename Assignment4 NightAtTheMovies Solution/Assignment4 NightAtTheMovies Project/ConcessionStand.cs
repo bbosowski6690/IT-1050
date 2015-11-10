@@ -16,25 +16,21 @@ namespace Assignment4_NightAtTheMovies_Project
         public const double pricePopcorn = 4.50;
         public const double priceCandy = 1.99;
 
-        static int SmallSoda;
-        static int LargeSoda;
-        static int HotDog;
-        static int Popcorn;
-        static int Candy;
+        public static int SmallSoda;
+        public static int LargeSoda;
+        public static int HotDog;
+        public static int Popcorn;
+        public static int Candy;
 
-        public static void GetConcessionCost()
-        {
-
-        }
 
         public static double GetTotalConcessionCost()
         {
-            GetConcessionCost();
+            
             double ConcessionCost = 0;
             bool isConcessionStand = false;
             if (isConcessionStand)
             {
-
+                ConcessionCost = (SmallSoda * priceSmallSoda) + (LargeSoda * priceLargeSoda) + (HotDog * priceHotDog) + (Popcorn * pricePopcorn) + (Candy * priceCandy);
             }
 
             return ConcessionCost;

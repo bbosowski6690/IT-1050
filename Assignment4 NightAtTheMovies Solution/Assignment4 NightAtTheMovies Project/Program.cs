@@ -6,12 +6,14 @@
         {
             Ticket.TicketCount = 0;
             ConcessionStand.ConcessionCost = 0;
+            Discount.DiscountAmount = 0;
+
 
             double TotalTicketCost = Ticket.GetTotalTicketCost();
             double TotalConessionCost = ConcessionStand.GetTotalConcessionCost();
             double TotalDiscountAmount = Discount.GetTotalDiscountAmount();
             double FinalTotalCost = TotalTicketCost + TotalConessionCost - TotalDiscountAmount;
-            
+
             MessageFromComputer("Would you like to see a matinee or evening movie?");
             if (System.Console.ReadLine().ToLower().StartsWith("matinee"))
             {
@@ -58,31 +60,31 @@
                 MessageFromComputer("How many would you like?");
                 double inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand SmallSoda = new ConcessionStand();
-                ConcessionStand.ConcessionCost += (SmallSoda * priceSmallSoda);
+                ConcessionStand.ConcessionCost += (ConcessionStand.SmallSoda * ConcessionStand.priceSmallSoda);
 
                 MessageFromComputer("One large soda is $" + ConcessionStand.priceLargeSoda + " ");
                 MessageFromComputer("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand LargeSoda = new ConcessionStand();
-                ConcessionStand.ConcessionCost += (LargeSoda * priceLargeSoda);
+                ConcessionStand.ConcessionCost += (ConcessionStand.LargeSoda * ConcessionStand.priceLargeSoda);
 
                 MessageFromComputer("One hot dog is $" + ConcessionStand.priceHotDog + " ");
                 MessageFromComputer("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand HotDog = new ConcessionStand();
-                ConcessionStand.ConcessionCost += (HotDog * priceHotdog);
+                ConcessionStand.ConcessionCost += (ConcessionStand.HotDog * ConcessionStand.priceHotDog);
 
                 MessageFromComputer("One bag of popcorn is $" + ConcessionStand.pricePopcorn + " ");
                 MessageFromComputer("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand Popcorn = new ConcessionStand();
-                ConcessionStand.ConcessionCost += (Popcorn * pricePopcorn);
+                ConcessionStand.ConcessionCost += (ConcessionStand.Popcorn * ConcessionStand.pricePopcorn);
 
                 MessageFromComputer("One box of candy is $" + ConcessionStand.priceCandy + " ");
                 MessageFromComputer("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand Candy = new ConcessionStand();
-                ConcessionStand.ConcessionCost += (Candy * priceCandy);
+                ConcessionStand.ConcessionCost += (ConcessionStand.Candy * ConcessionStand.priceCandy);
             }
 
             else
@@ -91,9 +93,9 @@
             }
 
 
+            YourFinalTotal();
 
-            
-
+        }
        
         private static void MessageFromComputer(string text)
         {
@@ -113,10 +115,9 @@
             System.Console.ReadKey();
         }
 
-        
-    }
-    
-}
-}
+        }
+        }
+  
+
     
 
