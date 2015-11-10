@@ -15,12 +15,12 @@
                 Ticket quantityAdultMatinee = new Ticket();
                 inputInteger += Ticket.TicketCount;
 
-                MessageFromComputer("How many adult tickets?");
+                MessageFromComputer("How many child tickets?");
                 inputInteger = int.Parse(System.Console.ReadLine());
                 Ticket quantityChildMatinee = new Ticket();
                 inputInteger += Ticket.TicketCount;
 
-                MessageFromComputer("How many adult tickets?");
+                MessageFromComputer("How many senior tickets?");
                 inputInteger = int.Parse(System.Console.ReadLine());
                 Ticket quantitySeniorMatinee = new Ticket();
                 inputInteger += Ticket.TicketCount;
@@ -32,48 +32,52 @@
                 Ticket quantityAdultEvening = new Ticket();
                 inputInteger += Ticket.TicketCount;
 
-                MessageFromComputer("How many adult tickets?");
+                MessageFromComputer("How many child tickets?");
                 inputInteger = int.Parse(System.Console.ReadLine());
                 Ticket quantityChildEvening = new Ticket();
                 inputInteger += Ticket.TicketCount;
 
-                MessageFromComputer("How many adult tickets?");
+                MessageFromComputer("How many senior tickets?");
                 inputInteger = int.Parse(System.Console.ReadLine());
                 Ticket quantitySeniorEvening = new Ticket();
                 inputInteger += Ticket.TicketCount;
 
             }
 
-            MessageFromComputer("Would you like anything from the concession stand?")
-            System.Console.ReadLine());
+            MessageFromComputer("Would you like anything from the concession stand?");
+            System.Console.ReadLine();
 
                 if (System.Console.ReadLine().ToLower().StartsWith("y"))
             {
                 MessageFromComputer("One small soda is $" + priceSmallSoda + " ");
-                int inputConcessionInteger = int.Parse(System.Console.ReadLine());
+                MessageFromComputer("How many would you like?");
+                double inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand SmallSoda = new ConcessionStand();
                 ConcessionStand.ConcessionCost += (SmallSoda * priceSmallSoda);
                 
                 MessageFromComputer("One large soda is $" + priceLargeSoda + " ");
-                inputConcessionInteger = int.Parse(System.Console.ReadLine());
+                MessageFromComputer("How many would you like?");
+                inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand LargeSoda = new ConcessionStand();
                 ConcessionStand.ConcessionCost += (LargeSoda * priceLargeSoda);
 
                 MessageFromComputer("One hot dog is $" + priceHotDog + " ");
-                inputConcessionInteger = int.Parse(System.Console.ReadLine());
+                MessageFromComputer("How many would you like?");
+                inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand HotDog = new ConcessionStand();
                 ConcessionStand.ConcessionCost += (HotDog * priceHotdog);
 
                 MessageFromComputer("One bag of popcorn is $" + pricePopcorn + " ");
-                inputConcessionInteger = int.Parse(System.Console.ReadLine());
+                MessageFromComputer("How many would you like?");
+                inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand Popcorn = new ConcessionStand();
                 ConcessionStand.ConcessionCost += (Popcorn * pricePopcorn);
 
                 MessageFromComputer("One box of candy is $" + priceCandy + " ");
-                inputConcessionInteger = int.Parse(System.Console.ReadLine());
+                MessageFromComputer("How many would you like?");
+                inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand Candy = new ConcessionStand();
                 ConcessionStand.ConcessionCost += (Candy * priceCandy);
-
             }
 
             else
@@ -100,7 +104,7 @@
             System.Console.Write(" ");
         }
 
-        private static void YourFinalTotal(string text)
+        private static void YourFinalTotal()
         {
             System.Console.WriteLine("Your final total is $" + FinalTotalCost + ".");
             System.Console.WriteLine(" ");

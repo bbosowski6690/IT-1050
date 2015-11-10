@@ -31,14 +31,15 @@ namespace Assignment4_NightAtTheMovies_Project
         {
             GetConcessionCost();
             double ConcessionCost = 0;
-            int inputConcessionInteger;
-            if (inputConcessionInteger > 0)
+            bool isConcessionStand = false;
+            if (isConcessionStand)
             {
-                
+
             }
 
             return ConcessionCost;
 
 
         }
+    }
 }
