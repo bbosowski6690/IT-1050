@@ -5,41 +5,45 @@
         static void Main(string[] args)
         {
             Ticket.TicketCount = 0;
-            ShowMainMenu();
 
-            string input = System.Console.ReadLine();
 
-            if (input == "1")
+            System.Console.WriteLine("Would you like to see a matinee or evening movie?");
+            if (System.Console.ReadLine().ToLower().StartsWith("matinee"))
             {
                 MessageFromComputer("How many adult tickets?");
                 int inputInteger = int.Parse(System.Console.ReadLine());
-                Ticket.TicketCount++;
-                MessageFromComputer("How many child tickets?");
-                inputInteger = int.Parse(System.Console.ReadLine());
-                Ticket.TicketCount ++ inputInteger;
-                MessageFromComputer("How many senior tickets?");
-                inputInteger = int.Parse(System.Console.ReadLine());
-                Ticket.TicketCount++;
+                Ticket quantityAdultMatinee = new Ticket();
+                inputInteger += Ticket.TicketCount;
 
-            }
-                else if (input == "2")
-                {
                 MessageFromComputer("How many adult tickets?");
+                inputInteger = int.Parse(System.Console.ReadLine());
+                Ticket quantityChildMatinee = new Ticket();
+                inputInteger += Ticket.TicketCount;
 
-                int.Parse(System.Console.ReadLine());
+                MessageFromComputer("How many adult tickets?");
+                inputInteger = int.Parse(System.Console.ReadLine());
+                Ticket quantitySeniorMatinee = new Ticket();
+                inputInteger += Ticket.TicketCount;
+}
+            else
+            {
+                MessageFromComputer("How many adult tickets?");
+                int inputInteger = int.Parse(System.Console.ReadLine());
+                Ticket quantityAdultEvening = new Ticket();
+                inputInteger += Ticket.TicketCount;
 
-                MessageFromComputer("How many child tickets?");
+                MessageFromComputer("How many adult tickets?");
+                inputInteger = int.Parse(System.Console.ReadLine());
+                Ticket quantityChildEvening = new Ticket();
+                inputInteger += Ticket.TicketCount;
 
-                int.Parse(System.Console.ReadLine());
-
-                MessageFromComputer("How many senior tickets?");
-
-                int.Parse(System.Console.ReadLine());
-
-
+                MessageFromComputer("How many adult tickets?");
+                inputInteger = int.Parse(System.Console.ReadLine());
+                Ticket quantitySeniorEvening = new Ticket();
+                inputInteger += Ticket.TicketCount;
 
             }
-            
+
 
             double TotalTicketCost = Ticket.GetTotalTicketCost();
 
@@ -56,17 +60,6 @@
             System.Console.WriteLine(" " + text);
             System.Console.WriteLine();
             System.Console.Write(" ");
-        }
-
-        private static void ShowMainMenu()
-        {
-            System.Console.WriteLine();
-            System.Console.WriteLine(" +-------------------------------------------+ ");
-            System.Console.WriteLine("      When would you like to see a movie?:     ");
-            System.Console.WriteLine(" +-------------------------------------------+ ");
-            System.Console.WriteLine("   (1) - Evening ");
-            System.Console.WriteLine("   (2) - Matinee ");
-            System.Console.WriteLine(" +-------------------------------------------+ ");
         }
 
         private static void YourFinalTotal(string text)

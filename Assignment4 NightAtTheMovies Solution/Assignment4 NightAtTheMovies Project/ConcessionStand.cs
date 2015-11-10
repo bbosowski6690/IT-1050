@@ -14,7 +14,13 @@ namespace Assignment4_NightAtTheMovies_Project
         private const double pricePopcorn = 4.50;
         private const double priceCandy = 1.99;
 
+        static int SmallSoda;
+        static int LargeSoda;
+        static int HotDog;
+        static int Popcorn;
+        static int Candy;
 
+       
 
     }
 }
