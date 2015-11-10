@@ -12,42 +12,36 @@
             if (input == "1")
             {
                 MessageFromComputer("How many adult tickets?");
-                
 
-                    System.Console.WriteLine("How many children tickets?");
-                    quantityChildMatinee = int.Parse(System.Console.ReadLine());
-                    ChildMatinee.Pricing(NumberOfChildren);
-                    TotalTicketPrice += ChildMatinee.TicketTotals();
+                int.Parse(System.Console.ReadLine());
 
-                    System.Console.WriteLine("How many adult tickets?");
-                    NumberOfAdults = int.Parse(System.Console.ReadLine());
-                    AdultMatinee.Pricing(NumberOfAdults);
-                    TotalTicketCost += quantityAdultMatinee.TicketTotals();
+                MessageFromComputer("How many child tickets?");
 
-                    System.Console.WriteLine("How many senior tickets?");
-                    NumberOfSeniors = int.Parse(System.Console.ReadLine());
-                    SeniorMatinee.Pricing(NumberOfSeniors);
-                    TotalTicketPrice += SeniorMatinee.TicketTotals();
-                }
+                int.Parse(System.Console.ReadLine());
+
+                MessageFromComputer("How many senior tickets?");
+
+                int.Parse(System.Console.ReadLine());
+
+
+            }
                 else if (input == "2")
                 {
-                MessageFromComputer("How many adult tickets?")
+                MessageFromComputer("How many adult tickets?");
 
-                    System.Console.WriteLine("How many children tickets?");
-                    NumberOfChildren = int.Parse(System.Console.ReadLine());
-                    ChildEvening.Pricing(NumberOfChildren);
-                    TotalTicketPrice += ChildEvening.TicketTotals();
+                int.Parse(System.Console.ReadLine());
 
-                    System.Console.WriteLine("How many adult tickets?");
-                    NumberOfAdults = int.Parse(System.Console.ReadLine());
-                    AdultEvening.Pricing(NumberOfAdults);
-                    TotalTicketPrice += AdultEvening.TicketTotals();
+                MessageFromComputer("How many child tickets?");
 
-                    System.Console.WriteLine("How many senior tickets?");
-                    NumberOfSeniors = int.Parse(System.Console.ReadLine());
-                    SeniorEvening.Pricing(NumberOfSeniors);
-                    TotalTicketPrice += SeniorEvening.TicketTotals();
-                }
+                int.Parse(System.Console.ReadLine());
+
+                MessageFromComputer("How many senior tickets?");
+
+                int.Parse(System.Console.ReadLine());
+
+
+
+            }
             
 
             double TotalTicketCost = Ticket.GetTotalTicketCost();
