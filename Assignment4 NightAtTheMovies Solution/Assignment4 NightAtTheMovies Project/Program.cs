@@ -12,17 +12,14 @@
             if (input == "1")
             {
                 MessageFromComputer("How many adult tickets?");
-
-                int.Parse(System.Console.ReadLine());
-
+                int inputInteger = int.Parse(System.Console.ReadLine());
+                Ticket.TicketCount++;
                 MessageFromComputer("How many child tickets?");
-
-                int.Parse(System.Console.ReadLine());
-
+                inputInteger = int.Parse(System.Console.ReadLine());
+                Ticket.TicketCount ++ inputInteger;
                 MessageFromComputer("How many senior tickets?");
-
-                int.Parse(System.Console.ReadLine());
-
+                inputInteger = int.Parse(System.Console.ReadLine());
+                Ticket.TicketCount++;
 
             }
                 else if (input == "2")
