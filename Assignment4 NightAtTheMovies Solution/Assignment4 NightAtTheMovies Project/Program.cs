@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Ticket.TicketCount = 0;
-
+            ConcessionStand.ConcessionCost = 0; 
 
             System.Console.WriteLine("Would you like to see a matinee or evening movie?");
             if (System.Console.ReadLine().ToLower().StartsWith("matinee"))
@@ -24,7 +24,7 @@
                 inputInteger = int.Parse(System.Console.ReadLine());
                 Ticket quantitySeniorMatinee = new Ticket();
                 inputInteger += Ticket.TicketCount;
-}
+            }
             else
             {
                 MessageFromComputer("How many adult tickets?");
@@ -43,6 +43,43 @@
                 inputInteger += Ticket.TicketCount;
 
             }
+
+            System.Console.WriteLine("Would you like anything from the concession stand?")
+
+                if (System.Console.ReadLine().ToLower().StartsWith("y"))
+            {
+                ConcessionStand SmallSoda = new ConcessionStand();
+                int inputConcessionInteger = int.Parse(System.Console.ReadLine());
+                MessageFromComputer("A small soda is $" + SmallSoda + " ");
+                ConcessionStand.ConcessionCost += (SmallSoda * priceSmallSoda);
+
+                ConcessionStand LargeSoda = new ConcessionStand();
+                inputConcessionInteger = int.Parse(System.Console.ReadLine());
+                MessageFromComputer("A small soda is $" + SmallSoda + " ");
+                ConcessionStand.ConcessionCost += (LargeSoda * priceLargeSoda);
+
+                ConcessionStand HotDog = new ConcessionStand();
+                inputConcessionInteger = int.Parse(System.Console.ReadLine());
+                MessageFromComputer("A small soda is $" + SmallSoda + " ");
+                ConcessionStand.ConcessionCost += (HotDog * priceHotdog);
+
+                ConcessionStand Popcorn = new ConcessionStand();
+                inputConcessionInteger = int.Parse(System.Console.ReadLine());
+                MessageFromComputer("A small soda is $" + SmallSoda + " ");
+                ConcessionStand.ConcessionCost += (Popcorn * pricePopcorn);
+
+                ConcessionStand Candy = new ConcessionStand();
+                inputConcessionInteger = int.Parse(System.Console.ReadLine());
+                MessageFromComputer("A small soda is $" + SmallSoda + " ");
+                ConcessionStand.ConcessionCost += (Candy * priceCandy);
+
+            }
+
+            else
+            {
+                System.Console.WriteLine("Press Any Key To Continue to Your Final Total");
+            }
+
 
 
             double TotalTicketCost = Ticket.GetTotalTicketCost();

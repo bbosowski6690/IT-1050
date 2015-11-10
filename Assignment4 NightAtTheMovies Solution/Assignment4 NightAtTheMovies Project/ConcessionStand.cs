@@ -8,11 +8,13 @@ namespace Assignment4_NightAtTheMovies_Project
 {
     class ConcessionStand
     {
-        private const double priceSmallSoda = 3.50;
-        private const double priceLargeSoda = 5.99;
-        private const double priceHotDog = 3.99;
-        private const double pricePopcorn = 4.50;
-        private const double priceCandy = 1.99;
+        public static double ConcessionCost;
+
+        const double priceSmallSoda = 3.50;
+        const double priceLargeSoda = 5.99;
+        const double priceHotDog = 3.99;
+        const double pricePopcorn = 4.50;
+        const double priceCandy = 1.99;
 
         static int SmallSoda;
         static int LargeSoda;
@@ -20,7 +22,23 @@ namespace Assignment4_NightAtTheMovies_Project
         static int Popcorn;
         static int Candy;
 
-       
+        public static void GetConcessionCost()
+        {
 
-    }
+        }
+
+        public static double GetTotalConcessionCost()
+        {
+            GetConcessionCost();
+            double ConcessionCost = 0;
+            int inputConcessionInteger;
+            if (inputConcessionInteger > 0)
+            {
+                
+            }
+
+            return ConcessionCost;
+
+
+        }
 }
