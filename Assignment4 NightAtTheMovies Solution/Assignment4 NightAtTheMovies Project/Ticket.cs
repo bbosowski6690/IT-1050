@@ -9,7 +9,7 @@ namespace Assignment4_NightAtTheMovies_Project
     public class Ticket
     {
         public enum TicketType {Adult, Child, Senior}
-        public double TotalTicketCost = 0;
+        public double TotalTicketCost;
         public static int TicketCount;
         public bool isMatinee = false;
 
