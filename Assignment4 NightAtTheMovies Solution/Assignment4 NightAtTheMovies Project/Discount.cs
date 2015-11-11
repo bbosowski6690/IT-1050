@@ -10,20 +10,21 @@ namespace Assignment4_NightAtTheMovies_Project
     {
        
         public static double DiscountAmount;
+        
         public double DiscountTicket;
         public double DiscountPS2;
         public double DiscountCandy;
-        
+       
+        public static double TotalTicketCost { get; set; }
+
         public static double GetTotalDiscountAmount()
         {
             double DiscountTicket = 0;
             double DiscountPS2 = 0;
             double DiscountCandy = 0;
             double DiscountAmount = 0;
-            bool isDiscount = false;
-            if (isDiscount)
-            {
-                if (Ticket.TicketCount >= 3)
+            
+            if (Ticket.TicketCount >= 3)
                 {
                     DiscountTicket = (TotalTicketCost - ConcessionStand.pricePopcorn);
                 }
@@ -38,9 +39,9 @@ namespace Assignment4_NightAtTheMovies_Project
                     DiscountCandy = ((ConcessionStand.Candy / 3) * 1.99);
                 }
 
-            }
 
             return DiscountAmount;
+        }
 
             //Discounts & Promotions
             //Each purchase of a popcorn and a large soda grants a $2 discount on one movie ticket.
@@ -48,6 +49,6 @@ namespace Assignment4_NightAtTheMovies_Project
             //For each 3 candies you buy, you can get a 4th candy for free.
         }
 
-        public static double TotalTicketCost { get; set; }
+        
     }
 }
