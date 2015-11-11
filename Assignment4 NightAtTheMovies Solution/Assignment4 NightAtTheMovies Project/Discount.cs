@@ -25,12 +25,12 @@ namespace Assignment4_NightAtTheMovies_Project
             {
                 if (Ticket.TicketCount >= 3)
                 {
-                    DiscountTicket = (FinalTotalCost - ConcessionStand.pricePopcorn);
+                    DiscountTicket = (TotalTicketCost - ConcessionStand.pricePopcorn);
                 }
                 
                 if (ConcessionStand.LargeSoda >=1 && ConcessionStand.Popcorn >= 1)
                 {
-                    DiscountPS2 = (FinalTotalCost - 2);
+                    DiscountPS2 = (TotalTicketCost - 2);
                 }
 
                 if (ConcessionStand.Candy >= 3)
