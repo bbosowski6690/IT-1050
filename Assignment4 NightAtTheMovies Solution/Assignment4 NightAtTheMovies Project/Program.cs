@@ -52,38 +52,33 @@
             }
 
             System.Console.WriteLine("Would you like anything from the concession stand?");
-            System.Console.ReadLine();
-
-            if (System.Console.ReadLine().ToLower().StartsWith("y"))
+            string input = System.Console.ReadLine();
+            
+            if (input.ToLower().StartsWith("y"))
             {
                 System.Console.WriteLine("One small soda is $" + ConcessionStand.priceSmallSoda + " ");
                 System.Console.WriteLine("How many would you like?");
                 double inputConcessionInteger = double.Parse(System.Console.ReadLine());
-                ConcessionStand SmallSoda = new ConcessionStand();
                 ConcessionStand.ConcessionCost += (ConcessionStand.SmallSoda * ConcessionStand.priceSmallSoda);
 
                 System.Console.WriteLine("One large soda is $" + ConcessionStand.priceLargeSoda + " ");
                 System.Console.WriteLine("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
-                ConcessionStand LargeSoda = new ConcessionStand();
                 ConcessionStand.ConcessionCost += (ConcessionStand.LargeSoda * ConcessionStand.priceLargeSoda);
 
                 System.Console.WriteLine("One hot dog is $" + ConcessionStand.priceHotDog + " ");
                 System.Console.WriteLine("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
-                ConcessionStand HotDog = new ConcessionStand();
                 ConcessionStand.ConcessionCost += (ConcessionStand.HotDog * ConcessionStand.priceHotDog);
 
                 System.Console.WriteLine("One bag of popcorn is $" + ConcessionStand.pricePopcorn + " ");
                 System.Console.WriteLine("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
-                ConcessionStand Popcorn = new ConcessionStand();
                 ConcessionStand.ConcessionCost += (ConcessionStand.Popcorn * ConcessionStand.pricePopcorn);
 
                 System.Console.WriteLine("One box of candy is $" + ConcessionStand.priceCandy + " ");
                 System.Console.WriteLine("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
-                ConcessionStand Candy = new ConcessionStand();
                 ConcessionStand.ConcessionCost += (ConcessionStand.Candy * ConcessionStand.priceCandy);
             }
 
@@ -91,6 +86,8 @@
             {
                 System.Console.WriteLine("Press Any Key To Continue to Your Final Total");
             }
+            
+            
 
             System.Console.WriteLine("Your final total is $" + FinalTotalCost + ".");
             System.Console.WriteLine(" ");
