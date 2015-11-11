@@ -25,12 +25,12 @@ namespace Assignment4_NightAtTheMovies_Project
             {
                 if (Ticket.TicketCount >= 3)
                 {
-                    DiscountTicket = (Ticket.TotalTicketCost - ConcessionStand.pricePopcorn);
+                    DiscountTicket = (FinalTotalCost - ConcessionStand.pricePopcorn);
                 }
                 
                 if (ConcessionStand.LargeSoda >=1 && ConcessionStand.Popcorn >= 1)
                 {
-                    DiscountPS2 = (Ticket.TotalTicketCost - 2);
+                    DiscountPS2 = (FinalTotalCost - 2);
                 }
 
                 if (ConcessionStand.Candy >= 3)
@@ -47,5 +47,7 @@ namespace Assignment4_NightAtTheMovies_Project
             //If 3 or more people purchase tickets to an evening show, they get 1 free bag of popcorn.
             //For each 3 candies you buy, you can get a 4th candy for free.
         }
+
+        public static double TotalTicketCost { get; set; }
     }
 }
