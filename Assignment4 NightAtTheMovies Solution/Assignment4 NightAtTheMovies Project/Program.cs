@@ -60,26 +60,31 @@
                 System.Console.WriteLine("How many would you like?");
                 double inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand.ConcessionCost += (ConcessionStand.SmallSoda * ConcessionStand.priceSmallSoda);
+                inputConcessionInteger += ConcessionStand.ConcessionCost;
 
                 System.Console.WriteLine("One large soda is $" + ConcessionStand.priceLargeSoda + " ");
                 System.Console.WriteLine("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand.ConcessionCost += (ConcessionStand.LargeSoda * ConcessionStand.priceLargeSoda);
+                inputConcessionInteger += ConcessionStand.ConcessionCost;
 
                 System.Console.WriteLine("One hot dog is $" + ConcessionStand.priceHotDog + " ");
                 System.Console.WriteLine("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand.ConcessionCost += (ConcessionStand.HotDog * ConcessionStand.priceHotDog);
+                inputConcessionInteger += ConcessionStand.ConcessionCost;
 
                 System.Console.WriteLine("One bag of popcorn is $" + ConcessionStand.pricePopcorn + " ");
                 System.Console.WriteLine("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand.ConcessionCost += (ConcessionStand.Popcorn * ConcessionStand.pricePopcorn);
+                inputConcessionInteger += ConcessionStand.ConcessionCost;
 
                 System.Console.WriteLine("One box of candy is $" + ConcessionStand.priceCandy + " ");
                 System.Console.WriteLine("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand.ConcessionCost += (ConcessionStand.Candy * ConcessionStand.priceCandy);
+                inputConcessionInteger += ConcessionStand.ConcessionCost;    
             }
 
             else
