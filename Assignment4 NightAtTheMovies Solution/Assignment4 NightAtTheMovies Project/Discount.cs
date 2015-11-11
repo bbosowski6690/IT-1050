@@ -10,40 +10,32 @@ namespace Assignment4_NightAtTheMovies_Project
     {
        
         public static double DiscountAmount;
-       
-        public double DiscountB = 0;
-        public double DiscountC = 0;
+        public double DiscountTicket;
+        public double DiscountPS2;
+        public double DiscountCandy;
         
         public static double GetTotalDiscountAmount()
         {
-            double DiscountA = 0;
-            double DiscountB = 0;
-            double DiscountC = 0;
+            double DiscountTicket = 0;
+            double DiscountPS2 = 0;
+            double DiscountCandy = 0;
             double DiscountAmount = 0;
             bool isDiscount = false;
             if (isDiscount)
             {
                 if (Ticket.TicketCount >= 3)
                 {
-                    DiscountA = (Ticket - 4.50);
+                    DiscountTicket = (Ticket.TotalTicketCost - ConcessionStand.pricePopcorn);
                 }
                 
-                if (ConcessionStand.LargeSoda < ConcessionStand.Popcorn)
+                if (ConcessionStand.LargeSoda && ConcessionStand.Popcorn >= 1)
                 {
-                    DiscountB = ConcessionStand.LargeSoda * 2;
-                }
-                else if (ConcessionStand.Popcorn < ConcessionStand.LargeSoda)
-                {
-                    DiscountB = ConcessionStand.Popcorn * 2;
-                }
-                else
-                {
-                    DiscountB = ConcessionStand.Popcorn * 2;
+                    DiscountPS2 = (Ticket.TotalTicketCost - 2);
                 }
 
-                if (ConcessionStand.Candy >= 4)
+                if (ConcessionStand.Candy >= 3)
                 {
-                    DiscountC = (ConcessionStand.Candy / 4) * 1.99;
+                    DiscountCandy = ((ConcessionStand.Candy / 3) * 1.99);
                 }
 
             }
