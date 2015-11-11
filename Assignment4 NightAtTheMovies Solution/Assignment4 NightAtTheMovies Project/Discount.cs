@@ -28,7 +28,7 @@ namespace Assignment4_NightAtTheMovies_Project
                     DiscountTicket = (Ticket.TotalTicketCost - ConcessionStand.pricePopcorn);
                 }
                 
-                if (ConcessionStand.LargeSoda && ConcessionStand.Popcorn >= 1)
+                if (ConcessionStand.LargeSoda >=1 && ConcessionStand.Popcorn >= 1)
                 {
                     DiscountPS2 = (Ticket.TotalTicketCost - 2);
                 }
