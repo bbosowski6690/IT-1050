@@ -15,7 +15,7 @@ namespace Assignment4_NightAtTheMovies_Project
         public double DiscountPS2;
         public double DiscountCandy;
        
-        public static double TotalTicketCost { get; set; }
+        
 
         public static double GetTotalDiscountAmount()
         {
@@ -24,14 +24,14 @@ namespace Assignment4_NightAtTheMovies_Project
             double DiscountCandy = 0;
             double DiscountAmount = 0;
             
-                if (Ticket.TicketCount >= 3)
+                if (Ticket.Count >= 3)
                 {
-                    DiscountTicket = (TotalTicketCost - ConcessionStand.pricePopcorn);
+                    DiscountTicket = ( - ConcessionStand.pricePopcorn);
                 }
 
                 if (ConcessionStand.LargeSoda >= 1 && ConcessionStand.Popcorn >= 1)
                 {
-                    DiscountPS2 = (TotalTicketCost - 2);
+                    DiscountPS2 = ( - 2);
                 }
 
                 if (ConcessionStand.Candy >= 3)

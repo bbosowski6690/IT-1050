@@ -8,9 +8,9 @@ namespace Assignment4_NightAtTheMovies_Project
 {
     public class Ticket
     {
-        public enum TicketType {Adult, Child, Senior}
+        public enum TicketType { Adult, Child, Senior }
         public double TotalTicketCost;
-        public static int TicketCount;
+        public static int Count;
         public bool isMatinee = false;
 
         public const double priceAdultMatinee = 5.99;
@@ -20,16 +20,16 @@ namespace Assignment4_NightAtTheMovies_Project
         public const double priceChildEvening = 6.99;
         public const double priceSeniorEvening = 8.50;
 
-       public static int quantityAdultMatinee = 0;
-       public static int quantityChildMatinee = 0;
-       public static int quantitySeniorMatinee = 0;
-       public static int quantityAdultEvening = 0;
-       public static int quantityChildEvening = 0;
-       public static int quantitySeniorEvening = 0;
+        public static int quantityAdultMatinee = 0;
+        public static int quantityChildMatinee = 0;
+        public static int quantitySeniorMatinee = 0;
+        public static int quantityAdultEvening = 0;
+        public static int quantityChildEvening = 0;
+        public static int quantitySeniorEvening = 0;
 
         public double GetTicketCost(TicketType ticketType, bool isMatinee)
         {
-            switch(ticketType)
+            switch (ticketType)
             {
                 case TicketType.Adult: return isMatinee ? priceAdultMatinee : priceAdultEvening;
                 case TicketType.Child: return isMatinee ? priceChildMatinee : priceChildEvening;
@@ -40,20 +40,20 @@ namespace Assignment4_NightAtTheMovies_Project
         }
 
         public static void GetTicketQuantities()
-        { 
-            TicketCount = 0;
+        {
+            Count = 0;
             bool isMatinee = false;
             if (isMatinee)
-                {
-                quantityChildMatinee += TicketCount;
-                quantityAdultMatinee += TicketCount;
-                quantitySeniorMatinee += TicketCount;
+            {
+                quantityChildMatinee += Count;
+                quantityAdultMatinee += Count;
+                quantitySeniorMatinee += Count;
             }
             else
             {
-                quantityChildEvening += TicketCount;
-                quantityAdultEvening += TicketCount;
-                quantitySeniorEvening += TicketCount;
+                quantityChildEvening += Count;
+                quantityAdultEvening += Count;
+                quantitySeniorEvening += Count;
             }
         }
         public static double GetTotalTicketCost()
@@ -71,10 +71,12 @@ namespace Assignment4_NightAtTheMovies_Project
             }
 
             return TotalTicketCost;
-
         }
+
+
+    }
         
 
 
     }
-}
+

@@ -27,7 +27,7 @@ namespace Assignment4_NightAtTheMovies_Project
         {
             
             double ConcessionCost = 0;
-            bool isConcessionStand = true;
+            bool isConcessionStand = false;
             if (isConcessionStand)
             {
                 ConcessionCost = (SmallSoda * priceSmallSoda) + (LargeSoda * priceLargeSoda) + (HotDog * priceHotDog) + (Popcorn * pricePopcorn) + (Candy * priceCandy);

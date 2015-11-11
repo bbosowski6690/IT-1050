@@ -5,14 +5,10 @@
         static void Main(string[] args)
         {
             
-            Ticket.TicketCount = 0;
-            ConcessionStand.ConcessionCost = 0;
-            Discount.DiscountAmount = 0;
-
             double TotalTicketCost = Ticket.GetTotalTicketCost();
             double TotalConessionCost = ConcessionStand.GetTotalConcessionCost();
             double TotalDiscountAmount = Discount.GetTotalDiscountAmount();
-            double FinalTotalCost = TotalTicketCost + TotalConessionCost - TotalDiscountAmount;
+            double FinalTotalCost = TotalTicketCost += TotalConessionCost -= TotalDiscountAmount;
 
             System.Console.WriteLine("Would you like to see a matinee or evening movie?");
             if (System.Console.ReadLine().ToLower().StartsWith("matinee"))
@@ -20,34 +16,34 @@
                 System.Console.WriteLine("How many adult tickets?");
                 int inputInteger = int.Parse(System.Console.ReadLine());
                 Ticket quantityAdultMatinee = new Ticket();
-                inputInteger += Ticket.TicketCount;
+                inputInteger += Ticket.Count;
 
                 System.Console.WriteLine("How many child tickets?");
                 inputInteger = int.Parse(System.Console.ReadLine());
                 Ticket quantityChildMatinee = new Ticket();
-                inputInteger += Ticket.TicketCount;
+                inputInteger += Ticket.Count;
 
                 System.Console.WriteLine("How many senior tickets?");
                 inputInteger = int.Parse(System.Console.ReadLine());
                 Ticket quantitySeniorMatinee = new Ticket();
-                inputInteger += Ticket.TicketCount;
+                inputInteger += Ticket.Count;
             }
             else
             {
                 System.Console.WriteLine("How many adult tickets?");
                 int inputInteger = int.Parse(System.Console.ReadLine());
                 Ticket quantityAdultEvening = new Ticket();
-                inputInteger += Ticket.TicketCount;
+                inputInteger += Ticket.Count++;
 
                 System.Console.WriteLine("How many child tickets?");
                 inputInteger = int.Parse(System.Console.ReadLine());
                 Ticket quantityChildEvening = new Ticket();
-                inputInteger += Ticket.TicketCount;
+                inputInteger += Ticket.Count++;
 
                 System.Console.WriteLine("How many senior tickets?");
                 inputInteger = int.Parse(System.Console.ReadLine());
                 Ticket quantitySeniorEvening = new Ticket();
-                inputInteger += Ticket.TicketCount;
+                inputInteger += Ticket.Count++;
 
             }
 
@@ -78,7 +74,7 @@
                 System.Console.WriteLine("How many would you like?");
                 inputConcessionInteger = double.Parse(System.Console.ReadLine());
                 ConcessionStand.ConcessionCost += (ConcessionStand.Popcorn * ConcessionStand.pricePopcorn);
-                inputConcessionInteger += ConcessionStand.ConcessionCost;
+                
 
                 System.Console.WriteLine("One box of candy is $" + ConcessionStand.priceCandy + " ");
                 System.Console.WriteLine("How many would you like?");
