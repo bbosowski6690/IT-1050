@@ -29,8 +29,9 @@ namespace Assignment5_LoopsAndArrays_Project
 
         public void Print()
         {
-            System.Console.WriteLine("The name of the course is " + CourseName + "." + "The CRN is " + CRN + "." + 
-                "There are " + Students.Length + " students in the class");
+            System.Console.WriteLine("The name of the course is " + CourseName + ".");
+            System.Console.WriteLine("The CRN is " + CRN + ".");
+            System.Console.WriteLine("There are " + Students.Length + " students in the class");
         }
 
         
