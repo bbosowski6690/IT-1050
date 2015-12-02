@@ -11,6 +11,16 @@ namespace Assignment5_LoopsAndArrays_Project
         public string Name;
         public string SNumber;
 
+        public void GetStudentInfo()
+        {
+            string name;
+            string sNumber;
+            name = Question.AskForString("Student's name");
+            sNumber = Question.AskForString("Student's SNumber");
+            Name = name;
+            SNumber = sNumber;
+        }
+
         public void Print()
         {
             System.Console.WriteLine("Student's Name: " + Name + " " + "Student's SNumber: " + SNumber);

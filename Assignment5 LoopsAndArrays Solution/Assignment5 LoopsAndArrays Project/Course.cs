@@ -14,9 +14,12 @@ namespace Assignment5_LoopsAndArrays_Project
 
         public void GetStudents()
         {
-            for (int i = 0; i < Students.Length; i++)
+            int size = Question.AskForInteger("How many students are in the class?");
+            Students = new Student[size];
+            for (int i=0; i<size; i++)
             {
                 Students[i] = new Student();
+                Students[i].GetStudentInfo(); 
             }
             foreach (Student student in Students)
             {

@@ -15,16 +15,20 @@ namespace Assignment5_LoopsAndArrays_Project
             student.SNumber = Question.AskForString("Please Enter Your SNumber");
             student.Print();
 
-            Course course = new Course();
-            course.CourseName = Question.AskForString("Please Enter Course Name");
-            course.CRN = Question.AskForInteger("Please Enter The CRN");
-            int size = Question.AskForInteger("How many students are in the class?");
-            course.Students = new Student[size];
-            course.Print();
+            System.Console.WriteLine("Would you like to create a new course?");
+            while (System.Console.ReadLine().ToLower().StartsWith("y"))
+            {
+                Course course = new Course();
+                course.CourseName = Question.AskForString("Please Enter Course Name");
+                course.CRN = Question.AskForInteger("Please Enter The CRN");
+                course.GetStudents();
+                course.Print();
+            }
 
             System.Console.WriteLine("Is everything correct? y/n");
             while (System.Console.ReadLine().ToLower().StartsWith("n"))
             {
+                Course course = new Course();
                 course.CourseName = Question.AskForString("Please Enter Course Name");
                 course.CRN = Question.AskForInteger("Please Enter The CRN");
                 int size2 = Question.AskForInteger("How many students are in the class?");
